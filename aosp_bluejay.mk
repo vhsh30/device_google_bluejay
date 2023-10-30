@@ -19,8 +19,8 @@ $(call inherit-product, device/google/bluejay/device-bluejay.mk)
 
 PRODUCT_NAME := aosp_bluejay
 PRODUCT_DEVICE := bluejay
-PRODUCT_MODEL := AOSP on Bluejay
-PRODUCT_BRAND := Android
+PRODUCT_MODEL := Pixel 6a
+PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
 # Keep the VNDK APEX in /system partition for REL branches as these branches are
@@ -28,3 +28,30 @@ PRODUCT_MANUFACTURER := Google
 ifneq (REL,$(PLATFORM_VERSION_CODENAME))
   PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 endif
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+
+# Project-Elixir
+IS_PHONE := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+ELIXIR_MAINTAINER := UniversalX
+ELIXIR_BUILD_TYPE := OFFICIAL
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_USES_AOSP_RECOVERY := true
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=bluejay \
+    PRIVATE_BUILD_DESC="bluejay-user 14 UP1A.231005.007 10754064 release-keys"
+
+BUILD_FINGERPRINT := google/bluejay/bluejay:14/UP1A.231005.007/10754064:user/release-keys
+
+$(call inherit-product, vendor/google/bluejay/bluejay-vendor.mk)
