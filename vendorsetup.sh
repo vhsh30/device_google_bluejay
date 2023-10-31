@@ -70,6 +70,8 @@ git clone https://android.googlesource.com/kernel/google-modules/video/gchips --
 rm -rf kernel/google/gs201/private/google-modules/wlan
 git clone https://android.googlesource.com/kernel/google-modules/wlan/bcmdhd/bcm4389 --depth 1 --no-tags --single-branch -b android-14.0.0_r0.7 kernel/google/gs201/private/google-modules/wlan/bcmdhd4389
 
+rm -rf hardware/samsung_slsi-linaro
+
 TOP=$(pwd)
 
 function reset() {
