@@ -70,8 +70,14 @@ git clone https://android.googlesource.com/kernel/google-modules/video/gchips --
 rm -rf kernel/google/gs201/private/google-modules/wlan
 git clone https://android.googlesource.com/kernel/google-modules/wlan/bcmdhd/bcm4389 --depth 1 --no-tags --single-branch -b android-14.0.0_r0.7 kernel/google/gs201/private/google-modules/wlan/bcmdhd4389
 
-#rm -rf hardware/google/graphics/common
-#git clone https://github.com/lineageos/android_hardware_google_graphics_common --depth 1 --no-tags --single-branch -b lineage-21.0 hardware/google/graphics/common
+rm -rf hardware/google/graphics/common
+git clone https://github.com/lineageos/android_hardware_google_graphics_common --depth 1 --no-tags --single-branch -b lineage-21.0 hardware/google/graphics/common
+
+rm -rf hardware/google/gchips
+git clone https://github.com/LineageOS/android_hardware_google_gchips/ --depth 1 --no-tags --single-branch -b lineage-21.0 hardware/google/gchips
+
+rm -rf hardware/google/pixel
+git clone https://github.com/LineageOS/android_hardware_google_pixel/ --depth 1 --no-tags --single-branch -b lineage-21.0 hardware/google/pixel
 
 rm -rf hardware/samsung_slsi-linaro
 
