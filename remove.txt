@@ -20,3 +20,6 @@ kernel/google/gs201/private/google-modules/touch
 kernel/google/gs201/private/google-modules/uwb
 kernel/google/gs201/private/google-modules/video
 kernel/google/gs201/private/google-modules/wlan
+hardware/google/gchips
+hardware/google/pixel
+hardware/google/graphics/common
