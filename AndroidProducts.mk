@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bluejay.mk \
+    $(LOCAL_DIR)/cherish_bluejay.mk \
     $(LOCAL_DIR)/factory_bluejay.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    aosp_bluejay-userdebug
+    cherish_bluejay-userdebug
