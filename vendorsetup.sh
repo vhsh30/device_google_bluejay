@@ -1,11 +1,11 @@
 rm -rf device/google/gs101
-git clone https://github.com/ProjectElixir-Devices/device_google_gs101 -b fourteen device/google/gs101 --depth 1
+git clone https://github.com/vhsh30/device_google_gs101 -b fourteen device/google/gs101 --depth 1
 
 rm -rf kernel/google/gs201/private/gs-google
-git clone https://github.com/ProjectElixir-Devices/kernel_google_gs201 -b fourteen kernel/google/gs201/private/gs-google --depth 1
+git clone https://github.com/vhsh30/kernel_google_gs201 -b fourteen kernel/google/gs201/private/gs-google --depth 1
 
 rm -rf device/google/gs-common
-git clone https://github.com/ProjectElixir-Devices/device_google_gs-common -b fourteen device/google/gs-common --depth 1
+git clone https://github.com/vhsh30/device_google_gs-common -b fourteen device/google/gs-common --depth 1
 
 rm -rf vendor/google/bluejay
 git clone https://gitlab.com/ItsLynix/vendor_google_bluejay -b fourteen  vendor/google/bluejay --depth 1
