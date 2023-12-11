@@ -17,7 +17,7 @@
 $(call inherit-product, device/google/gs101/aosp_common.mk)
 $(call inherit-product, device/google/bluejay/device-bluejay.mk)
 
-PRODUCT_NAME := aosp_bluejay
+PRODUCT_NAME := cherish_bluejay
 PRODUCT_DEVICE := bluejay
 PRODUCT_MODEL := Pixel 6a
 PRODUCT_BRAND := google
@@ -36,20 +36,11 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 
-# Project-Elixir
-IS_PHONE := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ACORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-ELIXIR_MAINTAINER := UniversalX
-ELIXIR_BUILD_TYPE := OFFICIAL
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_USES_AOSP_RECOVERY := true
-TARGET_SUPPORTS_GOOGLE_CAMERA := true
-PRODUCT_USE_SCUDO := true
-TARGET_USES_FULL_GAPPS := true
+# Inherit some props from Cherish
+CHERISH_VANILLA := true
+CHERISH_BUILD_TYPE := UNOFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=cracked_mod_menu
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=bluejay \
